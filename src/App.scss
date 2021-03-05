@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
