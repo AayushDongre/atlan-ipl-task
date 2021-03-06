@@ -5,9 +5,11 @@ import LazyLoading from "react-list-lazy-load";
 import PlayerCard from "../Components/PlayerCard/PlayerCard";
 import { players } from "../data/players";
 
+import "./List.scss";
+
 const PlayersPage: React.FC = () => {
   return (
-    <div>
+    <div id="lazyList">
       <LazyLoading length={players.length} items={players}>
         <ReactList
           type="uniform"
