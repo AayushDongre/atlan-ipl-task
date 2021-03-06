@@ -5,7 +5,7 @@
   width: 9vw;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 1.2px;
   line-height: 2rem;
 
@@ -20,8 +20,6 @@
   justify-content: center;
   height: 100vh;
   position: fixed;
-
-  font-size: 2rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -39,5 +37,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    font-size: 2rem;
+
   }
 }

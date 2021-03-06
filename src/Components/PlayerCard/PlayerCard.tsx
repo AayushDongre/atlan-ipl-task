@@ -17,12 +17,12 @@ const PlayerCard: React.FC<Player> = (props) => {
           </span>
           <span className="dob">
             <CardCalender />
-            {props.dob ?? <span id="unknown">Unkown</span>}
+            {props.dob ?? <span className="unknown">Unkown</span>}
           </span>
         </div>
         <div className="dominantArm">
           <CardBall />
-          {props.battingHand ?? <span id="unknown">Unkown</span>}
+          {props.battingHand ?? <span className="unknown">Unkown</span>}
         </div>
       </CardBase>
     </div>
