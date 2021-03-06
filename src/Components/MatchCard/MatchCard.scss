@@ -1,0 +1,53 @@
+@import "../../colors.scss";
+
+.matchCard {
+  display: flex;
+  margin: 1rem 0;
+}
+.teamNames {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.teamNames {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+}
+.winningTeam {
+  color: $cardGreen;
+}
+
+.vs {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: auto;
+}
+
+.losingTeam {
+  color: $cardRed;
+}
+
+.matchDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+
+  color: rgba(255, 255, 255, 0.8);
+}

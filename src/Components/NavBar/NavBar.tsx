@@ -9,11 +9,13 @@ const NavBar: React.FC = () => {
 
   return (
     <div className="navBar">
-      {paths.map((path) => (
-        <div onClick={() => setCurrentPath(path)}>
-          <NavBarButton path={path} active={currentPath === path} />
-        </div>
-      ))}
+      <div className="navbarContent">
+        {paths.map((path) => (
+          <div onClick={() => setCurrentPath(path)}>
+            <NavBarButton path={path} active={currentPath === path} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
