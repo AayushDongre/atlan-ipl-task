@@ -1,0 +1,17 @@
+@import "../colors.scss";
+
+.cardIcon {
+  margin-right: 0.6rem;
+}
+
+.cardGlobe {
+  fill: $globeBlue;
+}
+
+.cardCalender {
+  fill: $calenderYellow;
+}
+
+.cardBall {
+  fill: white;
+}

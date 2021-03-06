@@ -1,0 +1,20 @@
+.card {
+  min-height: 15vh;
+  min-width: 65vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: #414143;
+  box-shadow: 4px 5px 7px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 29px;
+}
+
+.cardArrow{
+    fill: white;
+}
+
+.card:hover{
+  background: #515153;
+}
