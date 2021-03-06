@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBarButton from "../NavBarButton/NavBarButton";
 
 import "./NavBar.scss";

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import TopBar from "./Components/NavBar/NavBar";
 import "./App.scss";
-import PlayerCard from "./Components/PlayerCard/PlayerCard";
 import TeamCard from "./Components/TeamCard/TeamCard";
 import MatchCard from "./Components/MatchCard/MatchCard";
+import PlayersPage from "./Pages/PlayersPage";
 
 function App() {
   const [currentPath, setCurrentPath] = useState("players");
@@ -13,15 +13,7 @@ function App() {
       <div className="wrapper">
         <TopBar currentPath={currentPath} setCurrentPath={setCurrentPath} />
         <div className="cardList">
-          {currentPath === "players" &&
-            [1, 2, 3, 4, 5, 6, 7, 8].map(() => (
-              <PlayerCard
-                country="India"
-                name="V. Kohli"
-                dob="05-07-2017"
-                dominantArm="Right"
-              />
-            ))}
+          {currentPath === "players" && <PlayersPage />}
           {currentPath === "teams" &&
             [1, 2, 3, 4, 5, 6, 7, 8].map(() => (
               <TeamCard

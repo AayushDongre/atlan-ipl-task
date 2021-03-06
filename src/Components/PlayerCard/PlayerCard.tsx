@@ -1,31 +1,28 @@
 import React from "react";
 import { CardBall, CardCalender, CardGlobe } from "../../Constants/Icons";
+import { Player } from "../../data/players";
 import CardBase from "../CardBase/CardBase";
 
 import "./PlayerCard.scss";
 
-export interface PlayerCardProps {
-  name: string;
-  dob: string;
-  dominantArm: string;
-  country: string;
-}
-
-const PlayerCard: React.FC<PlayerCardProps> = (props) => {
+const PlayerCard: React.FC<Player> = (props) => {
   return (
     <div className="playerCard">
       <CardBase>
-        <div className="playerName">{props.name}</div>
+        <div className="playerName">{props.playerName}</div>
         <div className="playerDetails">
           <span className="country">
-            <CardGlobe /> {props.country}
+            <CardGlobe />
+            {props.country ?? <span className="unknown">Unkown</span>}
           </span>
           <span className="dob">
-            <CardCalender /> {props.dob}
+            <CardCalender />
+            {props.dob ?? <span id="unknown">Unkown</span>}
           </span>
         </div>
         <div className="dominantArm">
-          <CardBall /> {props.dominantArm}
+          <CardBall />
+          {props.battingHand ?? <span id="unknown">Unkown</span>}
         </div>
       </CardBase>
     </div>
