@@ -9,7 +9,7 @@ export interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = (props) => {
-  const paths = ["players", "teams", "matches"];
+  const paths = ["matches", "players", "teams"];
 
   return (
     <div className="navBar">

@@ -5,11 +5,11 @@ export const CardArrow = () => (
   <svg
     className="cardIcon cardArrow"
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="16"
+    height="16"
     viewBox="0 0 24 24"
   >
-    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18v-12l9 6-9 6z" />
+    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
   </svg>
 );
 

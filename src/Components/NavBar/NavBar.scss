@@ -2,7 +2,7 @@
 
 .navBar {
   // min-height: 100vh;
-  width: 9rem;
+  width: 15rem;
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
@@ -17,7 +17,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   height: 100vh;
+  width: 15rem;
   position: fixed;
   background-color: $secondaryBackground;
 }
@@ -30,10 +32,13 @@
     width: 100vw;
     height: 8vh;
     min-height: fit-content;
+    position: fixed;
+    z-index: 2;
   }
   .navbarContent {
     position: relative;
     height: 100%;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;

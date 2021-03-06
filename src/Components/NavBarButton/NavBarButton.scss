@@ -2,9 +2,13 @@
 
 .navbar-button {
   margin: 0.5rem 2rem;
+  padding: 0.5rem 0;
+  transition: all 0.75s ease;
+
   color: $secondaryText;
   text-transform: capitalize;
 }
+
 .navbar-button:hover {
   color: rgba(235, 235, 245, 0.9);
   cursor: pointer;
@@ -12,4 +16,11 @@
 
 .active-title {
   color: white !important;
+  background-color: $primaryBackground;
+}
+
+@media only screen and (max-width: 600px){
+  .active-title {
+    background-color: inherit;
+  } 
 }

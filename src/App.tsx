@@ -8,7 +8,7 @@ import TopBar from "./Components/NavBar/NavBar";
 import "./App.scss";
 
 function App() {
-  const [currentPath, setCurrentPath] = useState("players");
+  const [currentPath, setCurrentPath] = useState("matches");
 
   return (
     <div className="wrapper">

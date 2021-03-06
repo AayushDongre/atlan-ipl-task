@@ -2,15 +2,14 @@
 
 .teamCard {
   display: flex;
-  margin: 1rem 0;
 }
 
 .teamName {
   font-weight: 500;
   font-size: 1.25rem;
-  letter-spacing: 2px;
-
-  width: 25rem;
+  text-align: center;
+  
+  flex-basis: 25%;
 }
 
 .winPercent {
