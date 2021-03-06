@@ -1,0 +1,40 @@
+@import "../../colors.scss";
+
+.teamCard {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.teamName {
+  font-weight: 500;
+  font-size: 2.25rem;
+  letter-spacing: 2px;
+}
+
+.winPercent {
+  display: flex;
+}
+
+.winPercent div {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem;
+
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.2px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.homePercent {
+  color: $cardGreen;
+}
+
+.awayPercent {
+  color: $cardBlue;
+}
