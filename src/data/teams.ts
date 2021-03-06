@@ -1,0 +1,138 @@
+export interface Team {
+  team: string;
+  homeWins: number;
+  awayWins: number;
+  homeMatches: number;
+  awayMatches: number;
+  home_win_percentage: number;
+  away_win_percentage: number;
+}
+
+export const teams: Team[] = [
+  {
+    team: "Rising Pune Supergiant",
+    homeWins: 5,
+    awayWins: 5,
+    homeMatches: 8,
+    awayMatches: 8,
+    home_win_percentage: 62.5,
+    away_win_percentage: 62.5,
+  },
+  {
+    team: "Mumbai Indians",
+    homeWins: 58,
+    awayWins: 51,
+    homeMatches: 101,
+    awayMatches: 86,
+    home_win_percentage: 57.42574257425742,
+    away_win_percentage: 59.30232558139535,
+  },
+  {
+    team: "Chennai Super Kings",
+    homeWins: 51,
+    awayWins: 49,
+    homeMatches: 89,
+    awayMatches: 75,
+    home_win_percentage: 57.30337078651685,
+    away_win_percentage: 65.33333333333333,
+  },
+  {
+    team: "Delhi Capitals",
+    homeWins: 3,
+    awayWins: 7,
+    homeMatches: 6,
+    awayMatches: 10,
+    home_win_percentage: 50,
+    away_win_percentage: 70,
+  },
+  {
+    team: "Sunrisers Hyderabad",
+    homeWins: 30,
+    awayWins: 28,
+    homeMatches: 63,
+    awayMatches: 45,
+    home_win_percentage: 47.61904761904761,
+    away_win_percentage: 62.22222222222222,
+  },
+  {
+    team: "Rajasthan Royals",
+    homeWins: 29,
+    awayWins: 46,
+    homeMatches: 67,
+    awayMatches: 80,
+    home_win_percentage: 43.28358208955223,
+    away_win_percentage: 57.49999999999999,
+  },
+  {
+    team: "Deccan Chargers",
+    homeWins: 18,
+    awayWins: 11,
+    homeMatches: 43,
+    awayMatches: 32,
+    home_win_percentage: 41.86046511627907,
+    away_win_percentage: 34.375,
+  },
+  {
+    team: "Kings XI Punjab",
+    homeWins: 38,
+    awayWins: 44,
+    homeMatches: 91,
+    awayMatches: 85,
+    home_win_percentage: 41.75824175824176,
+    away_win_percentage: 51.76470588235295,
+  },
+  {
+    team: "Royal Challengers Bangalore",
+    homeWins: 35,
+    awayWins: 49,
+    homeMatches: 85,
+    awayMatches: 95,
+    home_win_percentage: 41.17647058823529,
+    away_win_percentage: 51.578947368421055,
+  },
+  {
+    team: "Kolkata Knight Riders",
+    homeWins: 34,
+    awayWins: 58,
+    homeMatches: 83,
+    awayMatches: 95,
+    home_win_percentage: 40.963855421686745,
+    away_win_percentage: 61.05263157894737,
+  },
+  {
+    team: "Delhi Daredevils",
+    homeWins: 25,
+    awayWins: 42,
+    homeMatches: 72,
+    awayMatches: 89,
+    home_win_percentage: 34.72222222222222,
+    away_win_percentage: 47.19101123595505,
+  },
+  {
+    team: "Pune Warriors",
+    homeWins: 6,
+    awayWins: 6,
+    homeMatches: 20,
+    awayMatches: 26,
+    home_win_percentage: 30,
+    away_win_percentage: 23.076923076923077,
+  },
+  {
+    team: "Kochi Tuskers Kerala",
+    homeWins: 2,
+    awayWins: 4,
+    homeMatches: 7,
+    awayMatches: 7,
+    home_win_percentage: 28.57142857142857,
+    away_win_percentage: 57.14285714285714,
+  },
+  {
+    team: "Gujarat Lions",
+    homeWins: 1,
+    awayWins: 12,
+    homeMatches: 14,
+    awayMatches: 16,
+    home_win_percentage: 7.142857142857142,
+    away_win_percentage: 75,
+  },
+];

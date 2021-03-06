@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import TopBar from "./Components/NavBar/NavBar";
-import "./App.scss";
-import TeamCard from "./Components/TeamCard/TeamCard";
+
 import PlayersPage from "./Pages/PlayersPage";
 import MatchesPage from "./Pages/MatchesPage";
+import TeamsPage from "./Pages/TeamsPage";
+import TopBar from "./Components/NavBar/NavBar";
+
+import "./App.scss";
 
 function App() {
   const [currentPath, setCurrentPath] = useState("players");
@@ -14,14 +16,7 @@ function App() {
         <TopBar currentPath={currentPath} setCurrentPath={setCurrentPath} />
         <div className="cardList">
           {currentPath === "players" && <PlayersPage />}
-          {currentPath === "teams" &&
-            [1, 2, 3, 4, 5, 6, 7, 8].map(() => (
-              <TeamCard
-                teamName="Kings XI Punjab"
-                awayPercent={47.2}
-                homePercent={62.5}
-              />
-            ))}
+          {currentPath === "teams" && <TeamsPage />}
           {currentPath === "matches" && <MatchesPage />}
         </div>
       </div>
