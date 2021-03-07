@@ -4,39 +4,6 @@
   display: flex;
 }
 
-.teamNames {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-
-  font-family: Poppins;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.6rem;
-
-  flex-basis: 30%;
-}
-
-.winningTeam {
-  color: $cardGreen;
-}
-
-.vs {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.75);
-  margin: auto;
-}
-
-.losingTeam {
-  color: $cardRed;
-}
-
 .matchDetails {
   display: flex;
   flex-direction: column;
