@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import PlayersPage from "./Pages/PlayersPage";
-import MatchesPage from "./Pages/MatchesPage";
-import TeamsPage from "./Pages/TeamsPage";
+import PlayersPage from "./Pages/PlayersPage/PlayersPage";
+import MatchesPage from "./Pages/MatchesPage/MatchesPage";
+import TeamsPage from "./Pages/TeamsPage/TeamsPage";
 import TopBar from "./Components/NavBar/NavBar";
 
 import "./App.scss";

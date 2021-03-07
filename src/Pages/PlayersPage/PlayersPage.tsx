@@ -2,32 +2,32 @@ import React, { useState } from "react";
 import ReactList from "react-list";
 import LazyLoading from "react-list-lazy-load";
 
-import MatchCard from "../Components/MatchCard/MatchCard";
-import { matches } from "../data/matches";
-import CustomDrawer from "../Components/CustomDrawer/CustomDrawer";
+import CustomDrawer from "../../Components/CustomDrawer/CustomDrawer";
+import PlayerCard from "../../Components/PlayerCard/PlayerCard";
+import { players } from "../../data/players";
 
-const MatchesPage: React.FC = () => {
+const PlayersPage: React.FC = () => {
   const [drawerState, setDrawerState] = useState(false);
-  const [selectedMatch, setSelectedMatch] = useState(matches[0]);
+  const [selectedPlayer, setSelectedPlayer] = useState(players[0]);
 
   return (
     <div>
       <CustomDrawer isOpen={drawerState} setDrawerState={setDrawerState}>
-        {selectedMatch.date}
+        {selectedPlayer.dob}
       </CustomDrawer>
 
-      <LazyLoading length={matches.length} items={matches}>
+      <LazyLoading length={players.length} items={players}>
         <ReactList
           type="uniform"
-          length={matches.length}
+          length={players.length}
           itemRenderer={(id, key) => (
             <div
               onClick={() => {
                 setDrawerState(true);
-                setSelectedMatch(matches[id]);
+                setSelectedPlayer(players[id]);
               }}
             >
-              <MatchCard {...matches[id]} key={key} />
+              <PlayerCard {...players[id]} key={key} />
             </div>
           )}
         />
@@ -36,4 +36,4 @@ const MatchesPage: React.FC = () => {
   );
 };
 
-export default MatchesPage;
+export default PlayersPage;

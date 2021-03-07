@@ -1,0 +1,65 @@
+@import "../../colors.scss";
+
+.teamDrawer {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+
+  .drawerTeamName {
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    flex-basis: 15%;
+  }
+}
+
+.progressBars {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
+  .home,
+  .away {
+    font-size: 1.2rem;
+    text-align: center;
+
+    .winPercent {
+      text-align: center;
+      font-size: 1rem;
+      justify-content: center;
+      color: $secondaryText;
+    }
+  }
+}
+
+.homeBar {
+  height: 9rem;
+  margin: 2rem 0;
+
+  .CircularProgressbar-path {
+    stroke: $cardGreen !important;
+  }
+  .CircularProgressbar-trail {
+    stroke: #5e6175 !important;
+  }
+  .CircularProgressbar-text {
+    fill: $secondaryText !important;
+  }
+}
+
+.awayBar {
+  height: 9rem;
+  margin: 2rem 0;
+
+  .CircularProgressbar-path {
+    stroke: $cardBlue !important;
+  }
+  .CircularProgressbar-trail {
+    stroke: #5e6175 !important;
+  }
+  .CircularProgressbar-text {
+    fill: $secondaryText !important;
+  }
+}

@@ -1,6 +1,7 @@
 @import "../../colors.scss";
 
 .customDrawer {
+  display: flex;
   height: 100%;
   width: 23rem;
   padding: 2rem;
@@ -10,7 +11,7 @@
 
 @media only screen and (max-width: 600px) {
   .customDrawer {
-    height: 40vh;
+    padding: 2rem 0rem 4rem 0;
     width: 100%;
   }
 }
