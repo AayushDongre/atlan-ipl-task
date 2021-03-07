@@ -15,7 +15,12 @@ const NavBar: React.FC<NavBarProps> = (props) => {
     <div className="navBar">
       <div className="navbarContent">
         {paths.map((path) => (
-          <div onClick={() => props.setCurrentPath(path)}>
+          <div
+            onClick={() => {
+              localStorage.setItem("path", path);
+              props.setCurrentPath(path);
+            }}
+          >
             <NavBarButton path={path} active={props.currentPath === path} />
           </div>
         ))}

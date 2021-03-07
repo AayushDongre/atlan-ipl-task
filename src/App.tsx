@@ -8,7 +8,9 @@ import TopBar from "./Components/NavBar/NavBar";
 import "./App.scss";
 
 function App() {
-  const [currentPath, setCurrentPath] = useState("matches");
+  const [currentPath, setCurrentPath] = useState(
+    localStorage.getItem("path") ?? "matches"
+  );
 
   return (
     <div className="wrapper">

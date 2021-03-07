@@ -1,6 +1,8 @@
 import React from "react";
 import ReactList from "react-list";
 import LazyLoading from "react-list-lazy-load";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+
 import MatchCard from "../Components/MatchCard/MatchCard";
 import { matches } from "../data/matches";
 
