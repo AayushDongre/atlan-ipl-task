@@ -64,6 +64,13 @@ const MatchesPage: React.FC = () => {
         </div>
       </CustomDrawer>
 
+      <div className="inputBar">
+        <input type="text" placeholder="Team 1" />
+        <input type="text" placeholder="Team 2" />
+        <input type="text" placeholder="Venue" />
+        <input type="number" placeholder="IPL year" />
+      </div>
+
       <LazyLoading length={matches.length} items={matches}>
         <ReactList
           type="uniform"

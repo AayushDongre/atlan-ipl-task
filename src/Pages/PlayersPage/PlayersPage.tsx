@@ -53,22 +53,37 @@ const PlayersPage: React.FC = () => {
         </div>
       </CustomDrawer>
 
-      <LazyLoading length={players.length} items={players}>
-        <ReactList
-          type="uniform"
-          length={players.length}
-          itemRenderer={(id, key) => (
-            <div
-              onClick={() => {
-                setDrawerState(true);
-                setSelectedPlayer(players[id]);
-              }}
-            >
-              <PlayerCard {...players[id]} key={key} />
-            </div>
-          )}
-        />
-      </LazyLoading>
+      <div className="inputBar">
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Country" />
+        <input type="text" placeholder="Balling Skill" />
+        <select>
+          <option value="" disabled selected>
+            Batting Hand
+          </option>
+          <option value="Right_Hand">Right Hand</option>
+          <option value="Left_Hand">Left Hand</option>
+        </select>
+      </div>
+
+      <div>
+        <LazyLoading length={players.length} items={players}>
+          <ReactList
+            type="uniform"
+            length={players.length}
+            itemRenderer={(id, key) => (
+              <div
+                onClick={() => {
+                  setDrawerState(true);
+                  setSelectedPlayer(players[id]);
+                }}
+              >
+                <PlayerCard {...players[id]} key={key} />
+              </div>
+            )}
+          />
+        </LazyLoading>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,100 @@
+@import "colors.scss";
+
+.inputBar {
+  margin: 0rem 2rem;
+  padding: 1rem;
+  z-index: 10;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+  border-radius: 0 0 0.5rem 0.5rem;
+
+  background-color: $primaryBackground;
+
+  input {
+    flex-basis: 25%;
+    padding: 0 0.5rem;
+    margin: 0rem 1rem;
+    border: none;
+    border-radius: 10px;
+    line-height: 2.5rem !important;
+    color: white;
+    background-color: #000;
+  }
+
+  input::placeholder {
+    color: $secondaryText;
+    font-weight: 500;
+  }
+
+  input:active,
+  input:focus {
+    outline: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button {
+    opacity: 0.2;
+    margin: 7px;
+    width: 10px;
+  }
+
+  select {
+    flex-basis: 25%;
+    padding: 0 0.5rem;
+    margin: 0rem 1rem;
+    border: none;
+    border-radius: 10px;
+    line-height: 2.5rem !important;
+    color: white;
+    background-color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+  }
+  select:active,
+  select:focus {
+    outline: none;
+  }
+
+  .radio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inputBar {
+    margin: 0rem 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: left;
+    top: 8vh;
+
+    border-radius: 0 0 0.5rem 0.5rem;
+
+    background-color: $primaryBackground;
+
+    input {
+      width: 20rem !important;
+      padding: 0 1rem;
+      margin: 1rem 0.5rem;
+      border-radius: 5px;
+      line-height: 4rem !important;
+      color: white;
+      background-color: #000;
+    }
+
+    input::placeholder {
+      color: $secondaryText;
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+  }
+}

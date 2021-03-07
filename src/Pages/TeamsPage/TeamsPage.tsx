@@ -1,3 +1,4 @@
+import TextField from "@material-ui/core/TextField";
 import React, { useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -51,16 +52,24 @@ const TeamsPage: React.FC = () => {
         </div>
       </CustomDrawer>
 
-      {teams.map((team, index) => (
-        <div
-          onClick={() => {
-            setDrawerState(true);
-            setSelectedTeam(team);
-          }}
-        >
-          <TeamCard {...team} key={index} />
-        </div>
-      ))}
+      <div className="inputBar">
+        <input type="text" placeholder="Team Name" />
+        <input type="number" placeholder="Home Wins" />
+        <input type="number" placeholder="Away Wins" />
+      </div>
+
+      <div className="teamCardList">
+        {teams.map((team, index) => (
+          <div
+            onClick={() => {
+              setDrawerState(true);
+              setSelectedTeam(team);
+            }}
+          >
+            <TeamCard {...team} key={index} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

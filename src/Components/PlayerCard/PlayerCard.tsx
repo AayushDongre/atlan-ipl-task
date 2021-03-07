@@ -22,7 +22,9 @@ const PlayerCard: React.FC<Player> = (props) => {
         </div>
         <div className="dominantArm">
           <CardBall />
-          {props.battingHand ?? <span className="unknown">Unkown</span>}
+          {props.battingHand?.replace("_", " ") ?? (
+            <span className="unknown">Unkown</span>
+          )}
         </div>
       </CardBase>
     </div>
