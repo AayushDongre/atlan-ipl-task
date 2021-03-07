@@ -1,0 +1,16 @@
+@import "../../colors.scss";
+
+.customDrawer {
+  height: 100%;
+  width: 23rem;
+  padding: 2rem;
+  color: white;
+  background-color: $secondaryBackground;
+}
+
+@media only screen and (max-width: 600px) {
+  .customDrawer {
+    height: 40vh;
+    width: 100%;
+  }
+}

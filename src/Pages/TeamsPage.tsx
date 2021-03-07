@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+
+import CustomDrawer from "../Components/CustomDrawer/CustomDrawer";
 import TeamCard from "../Components/TeamCard/TeamCard";
 import { teams } from "../data/teams";
 
 const TeamsPage: React.FC = () => {
+  const [drawerState, setDrawerState] = useState(false);
+  const [selectedTeam, setSelectedTeam] = useState(teams[0]);
   return (
     <div>
-      {teams.map((team) => (
-        <TeamCard
-          team={team.team}
-          homeWins={team.homeWins}
-          awayWins={team.awayWins}
-          homeMatches={team.homeMatches}
-          awayMatches={team.awayMatches}
-          home_win_percentage={team.home_win_percentage}
-          away_win_percentage={team.away_win_percentage}
-        />
+      <CustomDrawer isOpen={drawerState} setDrawerState={setDrawerState}>
+        {selectedTeam.team}
+      </CustomDrawer>
+
+      {teams.map((team, index) => (
+        <div
+          onClick={() => {
+            setDrawerState(true);
+            setSelectedTeam(team);
+          }}
+        >
+          <TeamCard {...team} key={index} />
+        </div>
       ))}
     </div>
   );
