@@ -12,9 +12,11 @@ import "./TeamsPage.scss";
 const TeamsPage: React.FC = () => {
   const [drawerState, setDrawerState] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState(teams[0]);
-  const [teamName, setTeamName] = useState("");
-  const [homeWins, setHomeWins] = useState(0);
-  const [awayWins, setAwayWins] = useState(0);
+  const [filters, setFilters] = useState({
+    teamName: "",
+    homeWins: 0,
+    awayWins: 0,
+  });
 
   return (
     <div>
@@ -60,24 +62,35 @@ const TeamsPage: React.FC = () => {
         <input
           type="text"
           placeholder="Team Name"
-          onChange={(e) => setTeamName(e.target.value)}
+          onChange={(e) =>
+            setFilters((prevFilters) => ({
+              ...prevFilters,
+              teamName: e.target.value,
+            }))
+          }
         />
         <input
           type="number"
           placeholder="Home Wins"
           onChange={(e) =>
-            setHomeWins(
-              !!e.target.value ? Number.parseFloat(e.target.value) : 0
-            )
+            setFilters((prevFilters) => ({
+              ...prevFilters,
+              homeWins: !!e.target.value
+                ? Number.parseFloat(e.target.value)
+                : 0,
+            }))
           }
         />
         <input
           type="number"
           placeholder="Away Wins"
           onChange={(e) =>
-            setAwayWins(
-              !!e.target.value ? Number.parseFloat(e.target.value) : 0
-            )
+            setFilters((prevFilters) => ({
+              ...prevFilters,
+              awayWins: !!e.target.value
+                ? Number.parseFloat(e.target.value)
+                : 0,
+            }))
           }
         />
       </div>
@@ -86,9 +99,11 @@ const TeamsPage: React.FC = () => {
         {teams
           .filter((team) => {
             return (
-              team.team.includes(teamName) &&
-              team.awayWins >= awayWins &&
-              team.homeWins >= homeWins
+              team.team
+                .toLowerCase()
+                .includes(filters.teamName.toLowerCase()) &&
+              team.awayWins >= filters.awayWins &&
+              team.homeWins >= filters.homeWins
             );
           })
           .map((team, index) => (
