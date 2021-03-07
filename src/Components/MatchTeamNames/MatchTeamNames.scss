@@ -1,12 +1,12 @@
-@import "../../colors.scss";
+@import "../../Constants/colors.scss";
 
 .teamNames {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  text-align: center;
 
+  text-align: center;
   font-family: Poppins;
   font-weight: 500;
   font-size: 1rem;

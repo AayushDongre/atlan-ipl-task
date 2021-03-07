@@ -1,4 +1,4 @@
-@import "../../colors.scss";
+@import "../../Constants/colors.scss";
 
 .teamDrawer {
   display: flex;
@@ -7,9 +7,10 @@
 
   .drawerTeamName {
     font-weight: 500;
-    margin-bottom: 2.5rem;
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 2.5rem;
+
     flex-basis: 15%;
   }
 }

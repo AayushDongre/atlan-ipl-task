@@ -2,23 +2,15 @@ import React, { useState } from "react";
 import ReactList from "react-list";
 import LazyLoading from "react-list-lazy-load";
 
-import CustomDrawer from "../../Components/CustomDrawer/CustomDrawer";
 import PlayerCard from "../../Components/PlayerCard/PlayerCard";
 import { players } from "../../data/players";
 import PlayersDrawer from "./PlayersDrawer";
-/* eslint-disable */
 
 import "./PlayersPage.scss";
 
 const PlayersPage: React.FC = () => {
   const [drawerState, setDrawerState] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState(players[0]);
-  const [filters, setFilters] = useState({
-    name: "",
-    country: "",
-    bowlingSkill: "",
-    battingHand: "",
-  });
 
   return (
     <div>
@@ -29,44 +21,10 @@ const PlayersPage: React.FC = () => {
       />
 
       <div className="inputBar">
-        <input
-          type="text"
-          placeholder="Name"
-          onChange={(e) =>
-            setFilters((prevFilters) => ({
-              ...prevFilters,
-              name: e.target.value,
-            }))
-          }
-        />
-        <input
-          type="text"
-          placeholder="Country"
-          onChange={(e) =>
-            setFilters((prevFilters) => ({
-              ...prevFilters,
-              country: e.target.value,
-            }))
-          }
-        />
-        <input
-          type="text"
-          placeholder="Balling Skill"
-          onChange={(e) =>
-            setFilters((prevFilters) => ({
-              ...prevFilters,
-              bowlingSkill: e.target.value,
-            }))
-          }
-        />
-        <select
-          onChange={(e) =>
-            setFilters((prevFilters) => ({
-              ...prevFilters,
-              battingHand: e.target.value,
-            }))
-          }
-        >
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Country" />
+        <input type="text" placeholder="Balling Skill" />
+        <select>
           <option value="" selected>
             Batting Hand
           </option>

@@ -1,8 +1,8 @@
-@import "../../colors.scss";
+@import "../../Constants/colors.scss";
 
 .navBar {
-  // min-height: 100vh;
   width: 15rem;
+
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
@@ -10,6 +10,7 @@
   line-height: 2rem;
   -webkit-box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.55);
+
   box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.55);
 }
 
@@ -18,9 +19,11 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
   height: 100vh;
   width: 15rem;
   position: fixed;
+
   background-color: $secondaryBackground;
 }
 
@@ -29,9 +32,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
     width: 100vw;
     height: 8vh;
     min-height: fit-content;
+
     position: fixed;
     z-index: 2;
   }
@@ -39,6 +44,7 @@
     position: relative;
     height: 100%;
     width: 100%;
+
     flex-direction: row;
     justify-content: center;
     align-items: center;

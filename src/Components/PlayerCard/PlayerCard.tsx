@@ -1,4 +1,5 @@
 import React from "react";
+
 import { CardBall, CardCalender, CardGlobe } from "../../Constants/Icons";
 import { Player } from "../../data/players";
 import CardBase from "../CardBase/CardBase";

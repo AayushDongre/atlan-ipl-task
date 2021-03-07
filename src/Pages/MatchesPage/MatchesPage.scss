@@ -1,4 +1,4 @@
-@import "../../colors.scss";
+@import "../../Constants/colors.scss";
 
 .matchDrawer {
   width: 100%;
@@ -7,9 +7,11 @@
 
 .seasonDetails {
   margin-top: 2.5rem;
+  margin-bottom: 0;
+
   font-weight: 300;
   font-size: 0.9rem;
-  margin-bottom: 0;
+
   .slash {
     font-size: 1.2rem;
     color: $secondaryText;
@@ -18,6 +20,7 @@
 
 .locationDetails {
   margin-top: 0.2rem;
+
   font-size: 0.9rem;
   font-weight: 300;
   text-align: left;
@@ -53,6 +56,7 @@
     .teamNames {
       font-size: 1.5rem;
     }
+
     .vs {
       font-size: 1rem;
     }
@@ -62,6 +66,7 @@
     font-weight: 300;
     font-size: 1.1rem;
     margin-top: 2.2rem;
+
     .slash {
       font-size: 1.5rem;
     }

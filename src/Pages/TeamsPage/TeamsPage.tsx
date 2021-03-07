@@ -1,11 +1,9 @@
-import TextField from "@material-ui/core/TextField";
 import React, { useState } from "react";
-import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-import CustomDrawer from "../../Components/CustomDrawer/CustomDrawer";
 import TeamCard from "../../Components/TeamCard/TeamCard";
 import { teams } from "../../data/teams";
+import TeamsDrawer from "./TeamsDrawer";
 
 import "./TeamsPage.scss";
 
@@ -20,43 +18,11 @@ const TeamsPage: React.FC = () => {
 
   return (
     <div>
-      <CustomDrawer isOpen={drawerState} setDrawerState={setDrawerState}>
-        <div className="teamDrawer">
-          <div className="drawerTeamName">{selectedTeam.team}</div>
-          <div className="progressBars">
-            <div className="home">
-              Home Wins
-              <CircularProgressbar
-                className="homeBar"
-                value={selectedTeam.homeWins}
-                maxValue={selectedTeam.homeMatches}
-                text={`${selectedTeam.homeWins}/${selectedTeam.homeMatches}`}
-                styles={buildStyles({
-                  pathTransitionDuration: 0.5,
-                })}
-              />
-              <span className="winPercent">{`+${selectedTeam.home_win_percentage.toFixed(
-                2
-              )}%`}</span>
-            </div>
-            <div className="away">
-              Away Wins
-              <CircularProgressbar
-                className="awayBar"
-                value={selectedTeam.awayWins}
-                maxValue={selectedTeam.awayMatches}
-                text={`${selectedTeam.awayWins}/${selectedTeam.awayMatches}`}
-                styles={buildStyles({
-                  pathTransitionDuration: 0.5,
-                })}
-              />
-              <span className="winPercent">{`+${selectedTeam.away_win_percentage.toFixed(
-                2
-              )}%`}</span>
-            </div>
-          </div>
-        </div>
-      </CustomDrawer>
+      <TeamsDrawer
+        drawerState={drawerState}
+        setDrawerState={setDrawerState}
+        selectedTeam={selectedTeam}
+      />
 
       <div className="inputBar">
         <input

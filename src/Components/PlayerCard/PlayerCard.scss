@@ -8,6 +8,7 @@
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+
   flex-basis: 30%;
 }
 
@@ -28,28 +29,28 @@
 .country {
   display: flex;
   align-items: center;
+
   text-align: center;
   letter-spacing: 0.01em;
-
   color: rgba(255, 255, 255, 0.8);
 }
 
 .dob {
   display: flex;
   align-items: center;
-  text-align: center;
 
+  text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .dominantArm {
-  font-weight: 300;
-  font-size: 1.2rem;
   display: flex;
   align-items: center;
+
+  font-weight: 300;
+  font-size: 1.2rem;
   text-align: center;
   letter-spacing: 0.01em;
-
   color: rgba(255, 255, 255, 0.8);
 
   width: 10rem;

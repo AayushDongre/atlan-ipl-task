@@ -6,7 +6,7 @@ import TeamsPage from "./Pages/TeamsPage/TeamsPage";
 import TopBar from "./Components/NavBar/NavBar";
 
 import "./App.scss";
-import "./Inputs.scss";
+import "./Constants/Inputs.scss";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(
