@@ -12,6 +12,10 @@ import "./TeamsPage.scss";
 const TeamsPage: React.FC = () => {
   const [drawerState, setDrawerState] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState(teams[0]);
+  const [teamName, setTeamName] = useState("");
+  const [homeWins, setHomeWins] = useState(0);
+  const [awayWins, setAwayWins] = useState(0);
+
   return (
     <div>
       <CustomDrawer isOpen={drawerState} setDrawerState={setDrawerState}>
@@ -53,22 +57,50 @@ const TeamsPage: React.FC = () => {
       </CustomDrawer>
 
       <div className="inputBar">
-        <input type="text" placeholder="Team Name" />
-        <input type="number" placeholder="Home Wins" />
-        <input type="number" placeholder="Away Wins" />
+        <input
+          type="text"
+          placeholder="Team Name"
+          onChange={(e) => setTeamName(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Home Wins"
+          onChange={(e) =>
+            setHomeWins(
+              !!e.target.value ? Number.parseFloat(e.target.value) : 0
+            )
+          }
+        />
+        <input
+          type="number"
+          placeholder="Away Wins"
+          onChange={(e) =>
+            setAwayWins(
+              !!e.target.value ? Number.parseFloat(e.target.value) : 0
+            )
+          }
+        />
       </div>
 
       <div className="teamCardList">
-        {teams.map((team, index) => (
-          <div
-            onClick={() => {
-              setDrawerState(true);
-              setSelectedTeam(team);
-            }}
-          >
-            <TeamCard {...team} key={index} />
-          </div>
-        ))}
+        {teams
+          .filter((team) => {
+            return (
+              team.team.includes(teamName) &&
+              team.awayWins >= awayWins &&
+              team.homeWins >= homeWins
+            );
+          })
+          .map((team, index) => (
+            <div
+              onClick={() => {
+                setDrawerState(true);
+                setSelectedTeam(team);
+              }}
+            >
+              <TeamCard {...team} key={index} />
+            </div>
+          ))}
       </div>
     </div>
   );
