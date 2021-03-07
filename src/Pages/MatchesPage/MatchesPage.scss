@@ -49,5 +49,37 @@
 @media only screen and (max-width: 600px) {
   .matchDrawer {
     padding: 1rem 2rem;
+
+    .teamNames {
+      font-size: 1.5rem;
+    }
+    .vs {
+      font-size: 1rem;
+    }
+  }
+
+  .seasonDetails {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-top: 2.2rem;
+    .slash {
+      font-size: 1.5rem;
+    }
+  }
+
+  .locationDetails {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  .matchHighlightsTitle {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  .matchHighlights {
+    li {
+      font-size: 1.1rem;
+    }
   }
 }
